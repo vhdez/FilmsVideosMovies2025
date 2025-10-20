@@ -46,6 +46,8 @@ public class Movie {
     }
 
     public String toString() {
-        return "HI";
+        String description = "Movie ranked " + getRank();
+        description += " is: " + getTitle();
+        return description;
     }
 }

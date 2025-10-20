@@ -8,5 +8,20 @@ public class Film extends Movie {
         this.peak = peak;
     }
 
+    public int getPeak() {
+        return peak;
+    }
 
+    public void setPeak(int peak) {
+        this.peak = peak;
+    }
+
+    public String toString() {
+        String name = "Film Rank #" + getRank();
+        name += " is \"" + getTitle();
+        name += "\" earned " + getRevenue();
+        name += " , released on: " + getReleaseDate();
+        name += " , peaking at: " + getPeak();
+        return name;
+    }
 }
