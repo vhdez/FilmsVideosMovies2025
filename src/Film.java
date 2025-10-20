@@ -1,11 +1,22 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Film extends Movie {
-    int peak;
+    private int peak;
+    private static ArrayList<Film> allFilms = new ArrayList<Film>();
 
     public Film(int rank, String title, long revenue, LocalDate releaseDate, int peak) {
         super(rank, title, revenue, releaseDate);
         this.peak = peak;
+        allFilms.add(this);
+    }
+
+    public static ArrayList<Film> getAllFilms() {
+        return allFilms;
+    }
+
+    public static void setAllFilms(ArrayList<Film> allFilms) {
+        Film.allFilms = allFilms;
     }
 
     public int getPeak() {

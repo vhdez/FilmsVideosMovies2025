@@ -15,19 +15,21 @@ public class Main {
         LocalDate video1LocalDate = LocalDate.of(1995,3,3);
         new Video(1, "The Lion King", 852000000L, video1LocalDate, 48500000, 32000000, 11900000, 3680000);
 
-        // add them to an ArrayList
-        //ArrayList<Film> allFilms = new ArrayList<Film>();
-        //allFilms.add(film1);
-
-        //ArrayList<Video> allVideos = new ArrayList<Video>();
-        //allVideos.add(video1);
-
-        //allMovies.add(film1);
-        //allMovies.add(video1);
-
         // print all Objects in that ArrayList
+        System.out.println("ALL MOVIES: ");
         for (Movie eachMovie : Movie.getAllMovies()) {
             System.out.println(eachMovie);
         }
+
+        System.out.println("ONLY FILMS: ");
+        for (Film eachFilm : Film.getAllFilms()) {
+            System.out.println(eachFilm);
+        }
+
+        System.out.println("ONLY VIDEOS: ");
+        for (Video eachVideo : Video.getAllVideos()) {
+            System.out.println(eachVideo);
+        }
+
     }
 }

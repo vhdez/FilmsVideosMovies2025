@@ -2,10 +2,10 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Movie {
-    int rank;
-    String title;
-    long revenue;
-    LocalDate releaseDate;
+    private int rank;
+    private String title;
+    private long revenue;
+    private LocalDate releaseDate;
     private static ArrayList<Movie> allMovies = new ArrayList<Movie>();
 
     public Movie(int rank, String title, long revenue, LocalDate releaseDate) {

@@ -1,10 +1,12 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Video extends Movie {
-    int allSales;
-    int vhsSales;
-    int dvdSales;
-    int bluraySales;
+    private int allSales;
+    private int vhsSales;
+    private int dvdSales;
+    private int bluraySales;
+    private static ArrayList<Video> allVideos = new ArrayList<Video>();
 
     public Video(int rank, String title, long revenue, LocalDate releaseDate, int allSales, int vhsSales, int dvdSales, int bluraySales) {
         super(rank, title, revenue, releaseDate);
@@ -12,6 +14,15 @@ public class Video extends Movie {
         this.vhsSales = vhsSales;
         this.dvdSales = dvdSales;
         this.bluraySales = bluraySales;
+        allVideos.add(this);
+    }
+
+    public static ArrayList<Video> getAllVideos() {
+        return allVideos;
+    }
+
+    public static void setAllVideos(ArrayList<Video> allVideos) {
+        Video.allVideos = allVideos;
     }
 
     public int getAllSales() {
