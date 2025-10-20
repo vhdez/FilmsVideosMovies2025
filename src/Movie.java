@@ -1,16 +1,27 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
 
 public class Movie {
     int rank;
     String title;
     long revenue;
     LocalDate releaseDate;
+    private static ArrayList<Movie> allMovies = new ArrayList<Movie>();
 
     public Movie(int rank, String title, long revenue, LocalDate releaseDate) {
         this.rank = rank;
         this.title = title;
         this.revenue = revenue;
         this.releaseDate = releaseDate;
+        allMovies.add(this);
+    }
+
+    static public ArrayList<Movie> getAllMovies() {
+        return allMovies;
+    }
+
+    static public void setAllMovies(ArrayList<Movie> allMovies) {
+        allMovies = allMovies;
     }
 
     public int getRank() {
@@ -46,8 +57,10 @@ public class Movie {
     }
 
     public String toString() {
-        String description = "Movie ranked " + getRank();
-        description += " is: " + getTitle();
+        String description = " Rank #" + getRank();
+        description += " is \"" + getTitle();
+        description += "\" earned " + getRevenue();
+        description += " , released on: " + getReleaseDate();
         return description;
     }
 }

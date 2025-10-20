@@ -17,11 +17,8 @@ public class Film extends Movie {
     }
 
     public String toString() {
-        String name = "Film Rank #" + getRank();
-        name += " is \"" + getTitle();
-        name += "\" earned " + getRevenue();
-        name += " , released on: " + getReleaseDate();
-        name += " , peaking at: " + getPeak();
-        return name;
+        String superString = super.toString();
+        String newString = "Film " + superString + " , peaking at: " + getPeak();
+        return newString;
     }
 }
