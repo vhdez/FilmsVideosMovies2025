@@ -1,12 +1,8 @@
 import java.time.LocalDate;
-import java.util.ArrayList;
 
 public class Main {
-    public static void main(String[] args) {
-        // create a Film object
-        // 1	1	Avatar	$2,923,710,708	2009	[# 1][# 2]
-        LocalDate film1LocalDate = LocalDate.of(2009,1,1);
-        new Film(1, "Avatar",2923710708L, film1LocalDate,1);
+    public static void main(String[] args) throws Exception {
+        Film.readFilmData();
 
         // create a Movie object
         // The Lion King
