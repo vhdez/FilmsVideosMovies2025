@@ -57,10 +57,10 @@ public class Movie {
     }
 
     public String toString() {
-        String description = " Rank #" + getRank();
+        String description = "Rank #" + getRank();
         description += " is \"" + getTitle();
-        description += "\" earned " + getRevenue();
-        description += " , released on: " + getReleaseDate();
+        description += "\" earning $" + getRevenue();
+        description += " starting on release date: " + getReleaseDate();
         return description;
     }
 }

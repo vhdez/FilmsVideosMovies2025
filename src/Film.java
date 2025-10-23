@@ -31,7 +31,7 @@ public class Film extends Movie {
 
     public String toString() {
         String superString = super.toString();
-        String newString = "Film " + superString + " , peaking at: " + getPeak();
+        String newString = "Film " + superString + ", peaking at #" + getPeak();
         return newString;
     }
 
