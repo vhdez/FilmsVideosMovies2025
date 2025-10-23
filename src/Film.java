@@ -52,6 +52,7 @@ public class Film extends Movie {
             // 33	24RK	Spider-Man: Far From Home	$1,132,679,685	2019	[# 58][# 4]
             String peakChunk = lineScanner.next();
             peakChunk = peakChunk.replace("RK", "");
+            peakChunk = peakChunk.replace("TS", "");
             int peak = Integer.parseInt(peakChunk);
 
             String title = lineScanner.next();
