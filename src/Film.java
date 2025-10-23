@@ -48,34 +48,31 @@ public class Film extends Movie {
             // 1	1	Avatar	$2,923,710,708	2009	[# 1][# 2]
 
             int rank = lineScanner.nextInt();
-            int peak = lineScanner.nextInt();
+
+            // 33	24RK	Spider-Man: Far From Home	$1,132,679,685	2019	[# 58][# 4]
+            String peakChunk = lineScanner.next();
+            peakChunk = peakChunk.replace("RK", "");
+            int peak = Integer.parseInt(peakChunk);
+
             String title = lineScanner.next();
 
             String revenueChunk = lineScanner.next();
             revenueChunk = revenueChunk.replace("$","");
             revenueChunk = revenueChunk.replace(",","");
+            //4	1	Titanic	T$2,257,906,828	1997	[# 7][# 8]
             revenueChunk = revenueChunk.replace("T","");
-
+            // 8	6	Spider-Man: No Way Home	SM$1,922,598,800	2021	[# 15][# 16]
+            revenueChunk = revenueChunk.replace("SM","");
+            //24	5	Frozen	F$1,290,000,000	2013	[# 44][# 45]
+            revenueChunk = revenueChunk.replace("F","");
+            //38	7	The Dark Knight Rises	DKR$1,081,169,825	2012	[# 66][# 67]
+            revenueChunk = revenueChunk.replace("DKR","");
             long revenue = Long.parseLong(revenueChunk);
 
             int year = lineScanner.nextInt();
             LocalDate film1LocalDate = LocalDate.of(year, 1, 1);
+            // create each Film object
             new Film(rank, title, revenue, film1LocalDate, peak);
         }
-
-        // create a Film object
-
-        for (int i = 0; i < 0; i = i + 1) {
-            int rank = 1;
-            String title = "Avatar";
-            long revenue = 2923710708L;
-            int year = 2009;
-            LocalDate film1LocalDate = LocalDate.of(year, 1, 1);
-            int peak = 1;
-
-            new Film(rank, title, revenue, film1LocalDate, peak);
-        }
-
-
     }
 }
